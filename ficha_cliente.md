@@ -7,8 +7,9 @@
 | **Nombre** | Hotel Tariq Montería |
 | **Tipo** | Alojamiento 3 Estrellas (Cómodo, funcional, libre de humo) |
 | **Dirección** | Carrera 14 # 16 A 07, Montería, Córdoba |
-| **Teléfono Fijo** | No disponible públicamente (Gestión vía OTAs) |
-| **WhatsApp** | Pendiente por conseguir ⏳ |
+| **Teléfono / Fijo** | +57 604 7840032 (Recepción) |
+| **WhatsApp Recepción** | +57 311 419 1754 |
+| **WhatsApp Administrador** | +57 310 478 2783 (Lunes a Viernes 8am - 5pm) |
 | **Tiene página web** | ❌ NO (Solo Booking, Trivago, Expedia, Skyscanner) |
 | **Estado** | 🔵 Prospecto – Sin contactar |
 

@@ -1,14 +1,16 @@
 // Nexo Digital - Lógica de comportamiento en JS para Hotel Tariq con soporte para AOS y Bootstrap 5
 
-// 1. Efecto sombra en el Header al hacer scroll
+// 1. Efecto sombra en el Header al hacer scroll (con comprobación de seguridad para evitar errores JS)
 window.addEventListener('scroll', () => {
   const nav = document.querySelector('.navbar-custom');
-  if (window.scrollY > 50) {
-    nav.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.6)';
-    nav.style.padding = '0.8rem 6%';
-  } else {
-    nav.style.boxShadow = 'none';
-    nav.style.padding = '1.2rem 6%';
+  if (nav) {
+    if (window.scrollY > 50) {
+      nav.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.6)';
+      nav.style.padding = '0.8rem 6%';
+    } else {
+      nav.style.boxShadow = 'none';
+      nav.style.padding = '1.2rem 6%';
+    }
   }
 });
 
@@ -29,7 +31,7 @@ function enviarConsulta() {
   
   const encodedMsg = encodeURIComponent(msgText);
   
-  // Reemplazar este placeholder por el número de WhatsApp real una vez se consiga del administrador
+  // WhatsApp real del hotel receptor de reservas
   const hotelWhatsAppNumber = '573114191754'; 
 
   window.open(`https://wa.me/${hotelWhatsAppNumber}?text=${encodedMsg}`, '_blank');

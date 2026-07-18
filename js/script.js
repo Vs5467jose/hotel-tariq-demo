@@ -1,10 +1,14 @@
+// Nexo Digital - Lógica de comportamiento en JS para Hotel Tariq con soporte para AOS y Bootstrap 5
+
 // 1. Efecto sombra en el Header al hacer scroll
 window.addEventListener('scroll', () => {
-  const nav = document.querySelector('nav');
+  const nav = document.querySelector('.navbar-custom');
   if (window.scrollY > 50) {
     nav.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.6)';
+    nav.style.padding = '0.8rem 6%';
   } else {
     nav.style.boxShadow = 'none';
+    nav.style.padding = '1.2rem 6%';
   }
 });
 
@@ -25,8 +29,8 @@ function enviarConsulta() {
   
   const encodedMsg = encodeURIComponent(msgText);
   
-  // Usamos un número de teléfono de respaldo o el del usuario mientras conseguimos el del gerente
-  const hotelWhatsAppNumber = '573000000000'; 
+  // Reemplazar este placeholder por el número de WhatsApp real una vez se consiga del administrador
+  const hotelWhatsAppNumber = '573114191754'; 
 
   window.open(`https://wa.me/${hotelWhatsAppNumber}?text=${encodedMsg}`, '_blank');
 }
@@ -48,7 +52,7 @@ function calcularEstadia() {
   if (diffDays > 0) {
     let pricePerNight = 80000; // Tarifa básica Tariq
     if (roomType.includes("Doble")) pricePerNight = 120000;
-    if (roomType.includes("Suite")) pricePerNight = 160000;
+    if (roomType.includes("Premium")) pricePerNight = 160000;
 
     const total = pricePerNight * diffDays;
     const savings = Math.round(total * 0.15); // Ahorro Booking 15%
@@ -62,7 +66,7 @@ function calcularEstadia() {
   }
 }
 
-// 4. Lógica de FAQs e IntersectionObserver
+// 4. Inicializaciones al cargar el documento
 document.addEventListener('DOMContentLoaded', () => {
   // Asignar escuchadores a la calculadora
   const ci = document.getElementById('check-in');
@@ -75,48 +79,13 @@ document.addEventListener('DOMContentLoaded', () => {
     rt.addEventListener('change', calcularEstadia);
   }
 
-  // Acordeón FAQ
-  const faqItems = document.querySelectorAll('.faq-item');
-  faqItems.forEach(item => {
-    item.addEventListener('click', () => {
-      const answer = item.querySelector('.faq-answer');
-      const icon = item.querySelector('.faq-icon');
-      const isOpen = answer.style.display === 'block';
-      
-      document.querySelectorAll('.faq-answer').forEach(ans => ans.style.display = 'none');
-      document.querySelectorAll('.faq-icon').forEach(ic => ic.innerText = '+');
-
-      if (!isOpen) {
-        answer.style.display = 'block';
-        icon.innerText = '-';
-        item.style.borderColor = 'var(--green-light)';
-      } else {
-        answer.style.display = 'none';
-        icon.innerText = '+';
-        item.style.borderColor = 'rgba(142,90,51,0.1)';
-      }
+  // Inicializar la librería de animaciones AOS (Animate On Scroll)
+  if (typeof AOS !== 'undefined') {
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true,
+      mirror: false
     });
-  });
-
-  // Animaciones fade-up
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.animation = 'fadeUp 0.6s ease forwards';
-        entry.target.style.opacity = '1';
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { 
-    threshold: 0.1 
-  });
-
-  const animElements = document.querySelectorAll(
-    '.room-card, .service-box, .direct-card, .review-card, .info-item, .faq-item'
-  );
-
-  animElements.forEach(el => {
-    el.style.opacity = '0';
-    observer.observe(el);
-  });
+  }
 });

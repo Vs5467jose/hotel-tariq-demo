@@ -3,220 +3,481 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hotel Tariq | Confort, Comodidad y Descanso en Montería</title>
+  <title>Hotel Tariq | Confort y Comodidad en Montería (Vía Alamedas)</title>
   <meta name="description" content="Hospédate en el Hotel Tariq en Montería, Córdoba. Habitaciones 3 estrellas, cómodas, libres de humo, con aire acondicionado y Wi-Fi. Cerca de Alamedas y la Ronda del Sinú."/>
+  
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
-  <!-- Archivos de recursos externos enlazados -->
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
+  <!-- AOS CSS (Animaciones) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  
+  <!-- Archivo de Estilos Custom Personalizados -->
   <link rel="stylesheet" href="css/style.css"/>
-  <script src="js/script.js" defer></script>
 </head>
 <body>
 
-<nav>
-  <div class="logo">HOTEL <span>Tariq</span></div>
-  <ul class="nav-links">
-    <li><a href="#rooms">Habitaciones</a></li>
-    <li><a href="#services">Servicios</a></li>
-    <li><a href="#direct">Reserva Directa</a></li>
-    <li><a href="#reviews">Reseñas</a></li>
-    <li><a href="#tourist">Alrededores</a></li>
-    <li><a href="#faq">Preguntas</a></li>
-    <li><a href="#booking">Contacto</a></li>
-  </ul>
-  <a href="#booking" class="nav-cta">🏨 Reservar Directo</a>
-</nav>
+  <!-- NAVBAR CON BOOTSTRAP -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom py-3">
+    <div class="container-fluid px-md-5">
+      <a class="navbar-brand" href="#">HOTEL <span>Tariq</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#rooms">Habitaciones</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="#direct">Reserva Directa</a></li>
+          <li class="nav-item"><a class="nav-link" href="#reviews">Reseñas</a></li>
+          <li class="nav-item"><a class="nav-link" href="#tourist">Alrededores</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">Preguntas</a></li>
+          <li class="nav-item ms-lg-3"><a class="nav-link btn btn-nav px-4" href="#booking">🏨 Reservar Directo</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-<!-- HERO - EMBUDO DE ADQUISICIÓN -->
-<section id="hero">
-  <div class="badge">🛌 Categoría 3 Estrellas · 100% Libre de Humo</div>
-  <h1>El confort y descanso <span>que mereces en Montería</span></h1>
-  <p class="hero-sub">Ubicado en una zona residencial tranquila y céntrica. Habitaciones completamente equipadas, Wi-Fi de alta velocidad, desayuno incluido y la mejor atención de la ciudad.</p>
-  <div class="hero-btns">
-    <a href="#booking" class="btn-p">📅 Consultar Disponibilidad</a>
-    <a href="#rooms" class="btn-s">Ver Habitaciones →</a>
-  </div>
-  <div class="stats">
-    <div><div class="stat-num">3★</div><div class="stat-label">Clasificación</div></div>
-    <div><div class="stat-num">100%</div><div class="stat-label">Libre de Humo</div></div>
-    <div><div class="stat-num">5 min</div><div class="stat-label">Del Centro</div></div>
-  </div>
-</section>
-
-<!-- HABITACIONES -->
-<section id="rooms">
-  <div class="rooms-header">
-    <div class="sec-tag">🛏️ Nuestras Habitaciones</div>
-    <h2 class="sec-title">Comodidad y Funcionalidad</h2>
-    <p class="sec-sub">Elige el espacio ideal para tu viaje de negocios, estadía familiar o descanso de fin de semana.</p>
-  </div>
-  <div class="rooms-grid">
-    <div class="room-card">
-      <div class="room-visual">🛌</div>
-      <div class="room-body">
-        <div class="room-name">Habitación Estándar</div>
-        <div class="room-desc">Perfecta para una persona. Cama doble semi-ortopédica, aire acondicionado, escritorio de trabajo, televisor Smart y Wi-Fi de alta velocidad.</div>
-        <div class="room-footer">
-          <div class="room-price">$80.000 <span>/ noche</span></div>
-          <a href="#booking" class="btn-room">Reservar</a>
+  <!-- HERO SECTION CON BOOTSTRAP Y ANIMACIONES AOS -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container px-md-5">
+      <div class="row">
+        <div class="col-lg-8 text-start">
+          <span class="badge badge-custom mb-3 animate__animated animate__fadeIn" data-aos="fade-right">🛌 Categoría 3 Estrellas · 100% Libre de Humo</span>
+          <h1 class="text-white display-3 fw-bold mb-3" data-aos="fade-up" data-aos-delay="100">El confort y descanso <span>que mereces en Montería</span></h1>
+          <p class="hero-sub fs-5 mb-4 text-white-50" data-aos="fade-up" data-aos-delay="200">Ubicado en una zona residencial tranquila y céntrica. Habitaciones completamente equipadas, Wi-Fi de alta velocidad, desayuno incluido y la mejor atención de la ciudad.</p>
+          <div class="d-flex gap-3 flex-wrap" data-aos="fade-up" data-aos-delay="300">
+            <a href="#booking" class="btn btn-hero-primary d-flex align-items-center gap-2">📅 Consultar Disponibilidad</a>
+            <a href="#rooms" class="btn btn-hero-secondary">Ver Habitaciones →</a>
+          </div>
+        </div>
+      </div>
+      <!-- Stats con Bootstrap Grid -->
+      <div class="row stats mt-5 g-4 justify-content-start text-start" data-aos="fade-up" data-aos-delay="400">
+        <div class="col-auto me-4">
+          <div class="stat-num">3★</div>
+          <div class="stat-label">Clasificación</div>
+        </div>
+        <div class="col-auto me-4">
+          <div class="stat-num">100%</div>
+          <div class="stat-label">Libre de Humo</div>
+        </div>
+        <div class="col-auto">
+          <div class="stat-num">5 min</div>
+          <div class="stat-label">Del Centro</div>
         </div>
       </div>
     </div>
-    <div class="room-card">
-      <div class="room-visual">👥</div>
-      <div class="room-body">
-        <div class="room-name">Habitación Doble</div>
-        <div class="room-desc">Ideal para familias o colegas de trabajo. Cuenta con dos camas dobles, aire acondicionado silencioso, televisor y un amplio baño privado.</div>
-        <div class="room-footer">
-          <div class="room-price">$120.000 <span>/ noche</span></div>
-          <a href="#booking" class="btn-room">Reservar</a>
+  </section>
+
+  <!-- SECCIÓN HABITACIONES -->
+  <section id="rooms" class="section-padding bg-dark-2">
+    <div class="container px-md-5">
+      <div class="row justify-content-center text-center mb-5">
+        <div class="col-lg-6" data-aos="fade-up">
+          <span class="sec-tag">🛏️ Nuestras Habitaciones</span>
+          <h2 class="text-white fw-bold mt-2">Comodidad y Funcionalidad</h2>
+          <p class="sec-sub">Elige el espacio ideal para tu viaje de negocios, estadía familiar o descanso de fin de semana.</p>
+        </div>
+      </div>
+      
+      <!-- Grid de Habitaciones con Bootstrap y Fotos Reales -->
+      <div class="row g-4 justify-content-center">
+        <!-- Habitación Estándar -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="room-card">
+            <div class="room-img-container">
+              <img src="images/standard.jpg" alt="Habitación Estándar - Hotel Tariq"/>
+            </div>
+            <div class="room-body">
+              <h3 class="room-name text-white">Habitación Estándar</h3>
+              <p class="room-desc">Perfecta para una persona. Cama doble semi-ortopédica, aire acondicionado, escritorio de trabajo, televisor Smart y Wi-Fi de alta velocidad.</p>
+              <div class="room-footer">
+                <div class="room-price">$80.000 <span class="fs-7 text-muted">/ noche</span></div>
+                <a href="#booking" class="btn btn-room">Reservar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Habitación Doble -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="room-card">
+            <div class="room-img-container">
+              <img src="images/double.jpg" alt="Habitación Doble - Hotel Tariq"/>
+            </div>
+            <div class="room-body">
+              <h3 class="room-name text-white">Habitación Doble</h3>
+              <p class="room-desc">Ideal para familias o colegas de trabajo. Cuenta con dos camas dobles, aire acondicionado silencioso, televisor y un amplio baño privado.</p>
+              <div class="room-footer">
+                <div class="room-price">$120.000 <span class="fs-7 text-muted">/ noche</span></div>
+                <a href="#booking" class="btn btn-room">Reservar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Habitación Ejecutiva Premium -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="room-card">
+            <div class="room-img-container">
+              <img src="images/interior.jpg" alt="Habitación Ejecutiva Premium - Hotel Tariq"/>
+            </div>
+            <div class="room-body">
+              <h3 class="room-name text-white">Habitación Ejecutiva</h3>
+              <p class="room-desc">Nuestra habitación más espaciosa. Cama King Size, sala de estar independiente, frigobar, cafetera y la máxima comodidad libre de humo.</p>
+              <div class="room-footer">
+                <div class="room-price">$160.000 <span class="fs-7 text-muted">/ noche</span></div>
+                <a href="#booking" class="btn btn-room">Reservar</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="room-card">
-      <div class="room-visual">🌟</div>
-      <div class="room-body">
-        <div class="room-name">Habitación Ejecutiva Premium</div>
-        <div class="room-desc">Nuestra habitación más espaciosa. Cama King Size, sala de estar independiente, frigobar, cafetera y la máxima comodidad libre de humo.</div>
-        <div class="room-footer">
-          <div class="room-price">$160.000 <span>/ noche</span></div>
-          <a href="#booking" class="btn-room">Reservar</a>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section id="services" class="section-padding">
+    <div class="container px-md-5">
+      <div class="row align-items-center mb-5">
+        <div class="col-lg-6" data-aos="fade-right">
+          <span class="sec-tag">✨ Tus Comodidades</span>
+          <h2 class="text-white fw-bold mt-2">Servicios Pensados para tu Descanso</h2>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-box h-100">
+            <span class="srv-icon">📶</span>
+            <h3 class="srv-title text-white">Wi-Fi de Alta Velocidad</h3>
+            <p class="srv-text">Conexión premium e ilimitada en todo el hotel, perfecta para realizar teletrabajo o videoconferencias.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-box h-100">
+            <span class="srv-icon">❄️</span>
+            <h3 class="srv-title text-white">Aire Acondicionado</h3>
+            <p class="srv-text">Climatización de última tecnología en cada habitación para garantizar tu frescura y descanso.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-box h-100">
+            <span class="srv-icon">🚭</span>
+            <h3 class="srv-title text-white">Ambiente Libre de Humo</h3>
+            <p class="srv-text">Promovemos la salud y la higiene con instalaciones 100% libres de humo de tabaco.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+          <div class="service-box h-100">
+            <span class="srv-icon">🐾</span>
+            <h3 class="srv-title text-white">Pet Friendly</h3>
+            <p class="srv-text">Tus mascotas son bienvenidas a descansar contigo previa coordinación con nuestra recepción.</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- SERVICIOS -->
-<section id="services">
-  <div class="sec-tag">✨ Tus Comodidades</div>
-  <h2 class="sec-title">Servicios que Hacen la Diferencia</h2>
-  <div class="services-grid">
-    <div class="service-box"><span class="srv-icon">📶</span><div class="srv-title">Wi-Fi de Alta Velocidad</div><div class="srv-text">Conexión premium e ilimitada en todo el hotel, perfecta para realizar teletrabajo o videoconferencias.</div></div>
-    <div class="service-box"><span class="srv-icon">❄️</span><div class="srv-title">Aire Acondicionado</div><div class="srv-text">Climatización de última tecnología en cada habitación para garantizar tu frescura y descanso.</div></div>
-    <div class="service-box"><span class="srv-icon">🚭</span><div class="srv-title">Ambiente Libre de Humo</div><div class="srv-text">Promovemos la salud y la higiene con instalaciones 100% libres de humo de tabaco.</div></div>
-    <div class="service-box"><span class="srv-icon">🐾</span><div class="srv-title">Pet Friendly (Bajo Petición)</div><div class="srv-text">Tus mascotas son bienvenidas a descansar contigo previa coordinación con nuestra recepción.</div></div>
-  </div>
-</section>
-
-<!-- POR QUÉ RESERVAR DIRECTO -->
-<section id="direct">
-  <div class="sec-tag">🎁 Beneficios Exclusivos</div>
-  <h2 class="sec-title">Reserva Directo y Obtén Más</h2>
-  <div class="direct-grid">
-    <div class="direct-card"><span class="direct-icon">💸</span><div class="direct-title">Tarifa Más Baja Garantizada</div><div class="direct-desc">Evitamos intermediarios. Al reservar por WhatsApp o nuestra web, recibes precios sin comisiones de Booking.</div></div>
-    <div class="direct-card"><span class="direct-icon">🔑</span><div class="direct-title">Early Check-in de Cortesía</div><div class="direct-desc">Ingresa antes de la hora estipulada de forma totalmente gratuita (sujeto a disponibilidad de habitaciones).</div></div>
-    <div class="direct-card"><span class="direct-icon">🍳</span><div class="direct-title">Desayuno Incluido</div><div class="direct-desc">Todas las reservas directas de nuestra web incluyen el desayuno tradicional de cortesía.</div></div>
-  </div>
-</section>
-
-<!-- TESTIMONIOS -->
-<section id="reviews">
-  <div class="sec-tag">⭐ Opiniones Reales</div>
-  <h2 class="sec-title">Lo que Opinan Nuestros Huéspedes</h2>
-  <div class="reviews-grid">
-    <div class="review-card"><div class="stars">★★★★★</div><p class="rev-text">"El hotel es súper tranquilo, ideal para descansar después de trabajar. La cama comodísima y todo extremadamente limpio. Es excelente que sea libre de humo."</p><div class="rev-author"><div class="avatar">MR</div><div><div class="auth-name">Mauricio R.</div><div class="auth-loc">Viaje de Negocios · Booking</div></div></div></div>
-    <div class="review-card"><div class="stars">★★★★☆</div><p class="rev-text">"Muy cerca del Centro Comercial Alamedas y de los parques del centro. Tienen parqueadero privado y el desayuno de cortesía estuvo riquísimo."</p><div class="rev-author"><div class="avatar">SA</div><div><div class="auth-name">Sandra A.</div><div class="auth-loc">Turismo · Trivago</div></div></div></div>
-    <div class="review-card"><div class="stars">★★★★★</div><p class="rev-text">"Nos permitieron hospedarnos con nuestra mascota y la atención en recepción fue maravillosa. Las habitaciones tienen un aire acondicionado muy silencioso."</p><div class="rev-author"><div class="avatar">FP</div><div><div class="auth-name">Felipe P.</div><div class="auth-loc">Familia · Google</div></div></div></div>
-  </div>
-</section>
-
-<!-- GUÍA ALREDEDORES (UBICACIÓN ESTRATÉGICA) -->
-<section id="tourist">
-  <div class="sec-tag">🗺️ Puntos de Interés Cercanos</div>
-  <h2 class="sec-title">Cerca de Todo en Montería</h2>
-  <p class="sec-sub">Ubicados en una zona residencial muy tranquila, pero a minutos de los puntos de interés más importantes de la capital.</p>
-  <div class="services-grid">
-    <div class="service-box"><span class="srv-icon">🛍️</span><div class="srv-title">CC Alamedas (1 km)</div><div class="srv-text">A poco más de un kilómetro. El centro comercial más representativo de Montería con cines, restaurantes y tiendas.</div></div>
-    <div class="service-box"><span class="srv-icon">🌳</span><div class="srv-title">Parque Ronda del Sinú</div><div class="srv-text">A solo 5 minutos en automóvil. Disfruta de la fauna, monos, iguanas y la naturaleza junto al río.</div></div>
-    <div class="service-box"><span class="srv-icon">⛪</span><div class="srv-title">Catedral San Jerónimo</div><div class="srv-text">A 15 minutos de caminata. Visita el centro de la ciudad, parques principales y plazas históricas.</div></div>
-    <div class="service-box"><span class="srv-icon">✈️</span><div class="srv-title">Aeropuerto (13 km)</div><div class="srv-text">El aeropuerto Los Garzones se encuentra a tan solo 15-20 minutos de distancia en vehículo.</div></div>
-  </div>
-</section>
-
-<!-- PREGUNTAS FRECUENTES (FAQ) ACCORDION -->
-<section id="faq">
-  <div class="sec-tag">❓ Preguntas Frecuentes</div>
-  <h2 class="sec-title">Dudas Frecuentes Resueltas</h2>
-  <div style="margin-top: 3rem; display: flex; flex-direction: column; gap: 1rem; max-width: 800px; margin-inline: auto;">
-    <div class="faq-item" style="background: var(--dark-2); border: 1px solid rgba(142,90,51,0.1); border-radius: 8px; padding: 1.2rem; cursor: pointer; transition: all 0.3s;">
-      <div class="faq-question" style="font-weight: 700; display: flex; justify-content: space-between; align-items: center;">
-        <span>¿Qué significa que el hotel sea "Libre de Humo"?</span>
-        <span class="faq-icon" style="color:var(--green-light);">+</span>
+  <!-- BENEFICIOS RESERVA DIRECTA -->
+  <section id="direct" class="section-padding bg-dark-2">
+    <div class="container px-md-5">
+      <div class="row justify-content-center text-center mb-5">
+        <div class="col-lg-6" data-aos="fade-up">
+          <span class="sec-tag">🎁 Beneficios Exclusivos</span>
+          <h2 class="text-white fw-bold mt-2">Reserva Directo y Obtén Más</h2>
+        </div>
       </div>
-      <div class="faq-answer" style="margin-top: 0.8rem; color: var(--muted); font-size: 0.9rem; display: none; line-height: 1.5;">
-        Para garantizar la higiene, el confort y la salud de todos nuestros huéspedes, no está permitido fumar cigarrillos ni vapeadores en ninguna de nuestras habitaciones ni áreas comunes cerradas.
+      <div class="row g-4">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="direct-card text-center h-100">
+            <span class="direct-icon">💸</span>
+            <h3 class="direct-title text-white">Tarifa Más Baja Garantizada</h3>
+            <p class="direct-desc">Evitamos intermediarios. Al reservar por WhatsApp o nuestra web, recibes precios sin comisiones de Booking.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="direct-card text-center h-100">
+            <span class="direct-icon">🔑</span>
+            <h3 class="direct-title text-white">Early Check-in Gratis</h3>
+            <p class="direct-desc">Ingresa antes de la hora estipulada de forma totalmente gratuita (sujeto a disponibilidad de habitaciones).</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="direct-card text-center h-100">
+            <span class="direct-icon">🍳</span>
+            <h3 class="direct-title text-white">Desayuno Incluido</h3>
+            <p class="direct-desc">Todas las reservas directas de nuestra web incluyen el desayuno tradicional de cortesía.</p>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="faq-item" style="background: var(--dark-2); border: 1px solid rgba(142,90,51,0.1); border-radius: 8px; padding: 1.2rem; cursor: pointer; transition: all 0.3s;">
-      <div class="faq-question" style="font-weight: 700; display: flex; justify-content: space-between; align-items: center;">
-        <span>¿El hotel acepta mascotas en las habitaciones?</span>
-        <span class="faq-icon" style="color:var(--green-light);">+</span>
+  </section>
+
+  <!-- TESTIMONIOS -->
+  <section id="reviews" class="section-padding">
+    <div class="container px-md-5">
+      <div class="row justify-content-center text-center mb-5">
+        <div class="col-lg-6" data-aos="fade-up">
+          <span class="sec-tag">⭐ Opiniones Reales</span>
+          <h2 class="text-white fw-bold mt-2">Lo que Opinan Nuestros Huéspedes</h2>
+        </div>
       </div>
-      <div class="faq-answer" style="margin-top: 0.8rem; color: var(--muted); font-size: 0.9rem; display: none; line-height: 1.5;">
-        Sí, admitimos mascotas de compañía bajo petición previa. Contáctanos por WhatsApp al reservar para confirmar las políticas de peso y el suplemento correspondiente si aplica.
+      <div class="row g-4">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="review-card h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+              <p class="rev-text">"El hotel es súper tranquilo, ideal para descansar después de trabajar. La cama comodísima y todo extremadamente limpio. Es excelente que sea libre de humo."</p>
+            </div>
+            <div class="rev-author d-flex align-items-center mt-3">
+              <div class="avatar-custom">MR</div>
+              <div class="ms-2">
+                <div class="auth-name text-white">Mauricio R.</div>
+                <div class="auth-loc">Viaje de Negocios · Booking</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="review-card h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></div>
+              <p class="rev-text">"Muy cerca del Centro Comercial Alamedas y de los parques del centro. Tienen parqueadero privado y el desayuno de cortesía estuvo riquísimo."</p>
+            </div>
+            <div class="rev-author d-flex align-items-center mt-3">
+              <div class="avatar-custom">SA</div>
+              <div class="ms-2">
+                <div class="auth-name text-white">Sandra A.</div>
+                <div class="auth-loc">Turismo · Trivago</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="review-card h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+              <p class="rev-text">"Nos permitieron hospedarnos con nuestra mascota y la atención en recepción fue maravillosa. Las habitaciones tienen un aire acondicionado muy silencioso."</p>
+            </div>
+            <div class="rev-author d-flex align-items-center mt-3">
+              <div class="avatar-custom">FP</div>
+              <div class="ms-2">
+                <div class="auth-name text-white">Felipe P.</div>
+                <div class="auth-loc">Familia · Google</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="faq-item" style="background: var(--dark-2); border: 1px solid rgba(142,90,51,0.1); border-radius: 8px; padding: 1.2rem; cursor: pointer; transition: all 0.3s;">
-      <div class="faq-question" style="font-weight: 700; display: flex; justify-content: space-between; align-items: center;">
-        <span>¿Tienen servicio de parqueadero disponible?</span>
-        <span class="faq-icon" style="color:var(--green-light);">+</span>
+  </section>
+
+  <!-- ALREDEDORES (UBICACIÓN ESTRATÉGICA) -->
+  <section id="tourist" class="section-padding bg-dark-2">
+    <div class="container px-md-5">
+      <div class="row justify-content-center text-center mb-5">
+        <div class="col-lg-6" data-aos="fade-up">
+          <span class="sec-tag">🗺️ Puntos de Interés Cercanos</span>
+          <h2 class="text-white fw-bold mt-2">Cerca de Todo en Montería</h2>
+          <p class="sec-sub">Ubicados en una zona residencial muy tranquila, pero a minutos de los puntos de interés más importantes de la capital.</p>
+        </div>
       </div>
-      <div class="faq-answer" style="margin-top: 0.8rem; color: var(--muted); font-size: 0.9rem; display: none; line-height: 1.5;">
-        Sí, contamos con parqueadero privado, cerrado y con vigilancia para el resguardo seguro del vehículo de nuestros huéspedes de forma gratuita.
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-box h-100">
+            <span class="srv-icon">🛍️</span>
+            <h3 class="srv-title text-white">CC Alamedas (1 km)</h3>
+            <p class="srv-text">A poco más de un kilómetro. El centro comercial más representativo de Montería con cines, restaurantes y tiendas.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-box h-100">
+            <span class="srv-icon">🌳</span>
+            <h3 class="srv-title text-white">Parque Ronda del Sinú</h3>
+            <p class="srv-text">A solo 5 minutos en automóvil. Disfruta de la fauna, monos, iguanas y la naturaleza junto al río.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-box h-100">
+            <span class="srv-icon">⛪</span>
+            <h3 class="srv-title text-white">Catedral San Jerónimo</h3>
+            <p class="srv-text">A 15 minutos de caminata. Visita el centro de la ciudad, parques principales y plazas históricas.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+          <div class="service-box h-100">
+            <span class="srv-icon">✈️</span>
+            <h3 class="srv-title text-white">Aeropuerto (13 km)</h3>
+            <p class="srv-text">El aeropuerto Los Garzones se encuentra a tan solo 15-20 minutos de distancia en vehículo.</p>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- RESERVA DIRECTA & FORMULARIO -->
-<section id="booking">
-  <div>
-    <div class="sec-tag">📍 Ubicación y Reserva Directa</div>
-    <h2 class="sec-title">Ahorra Comisiones e Intermediarios</h2>
-    <p class="sec-sub">Escríbenos y cotiza tu estadía. Te responderemos al instante confirmando tu reserva con el mejor precio disponible.</p>
-    <div class="info-list">
-      <div class="info-item"><div class="ii-icon">📍</div><span>Carrera 14 # 16 A 07, Montería, Córdoba, Colombia</span></div>
-      <div class="info-item"><div class="ii-icon">📞</div><span>Fijo en Recepción (Preguntar al contactar)</span></div>
-      <div class="info-item"><div class="ii-icon">✉️</div><span>contacto@hoteltariq.com</span></div>
-      <div class="info-item"><div class="ii-icon">🚭</div><span>Ambiente 100% familiar y libre de humo</span></div>
+  <!-- SECCIÓN PREGUNTAS FRECUENTES (FAQ) CON BOOTSTRAP ACCORDION -->
+  <section id="faq" class="section-padding">
+    <div class="container px-md-5">
+      <div class="row justify-content-center text-center mb-5">
+        <div class="col-lg-6" data-aos="fade-up">
+          <span class="sec-tag">❓ Preguntas Frecuentes</span>
+          <h2 class="text-white fw-bold mt-2">Dudas Frecuentes Resueltas</h2>
+        </div>
+      </div>
+      
+      <div class="row justify-content-center">
+        <div class="col-lg-8" data-aos="fade-up">
+          <div class="accordion faq-accordion" id="accordionFaq">
+            <!-- FAQ 1 -->
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                  ¿Qué significa que el hotel sea "Libre de Humo"?
+                </button>
+              </h3>
+              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionFaq">
+                <div class="accordion-body">
+                  Para garantizar la higiene, el confort y la salud de todos nuestros huéspedes, no está permitido fumar cigarrillos ni vapeadores en ninguna de nuestras habitaciones ni áreas comunes cerradas.
+                </div>
+              </div>
+            </div>
+            
+            <!-- FAQ 2 -->
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  ¿El hotel acepta mascotas en las habitaciones?
+                </button>
+              </h3>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionFaq">
+                <div class="accordion-body">
+                  Sí, admitimos mascotas de compañía bajo petición previa. Contáctanos por WhatsApp al reservar para confirmar las políticas de peso y el suplemento correspondiente si aplica.
+                </div>
+              </div>
+            </div>
+            
+            <!-- FAQ 3 -->
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  ¿Tienen servicio de parqueadero disponible?
+                </button>
+              </h3>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionFaq">
+                <div class="accordion-body">
+                  Sí, contamos con parqueadero privado, cerrado y con vigilancia para el resguardo seguro del vehículo de nuestros huéspedes de forma gratuita.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="form-box">
-    <h3>Consulta tu Reserva</h3>
-    <div class="fg"><label>Nombre Completo</label><input type="text" id="guest-name" placeholder="Ej: Juan Doria"/></div>
-    <div class="fg"><label>Habitación</label>
-      <select id="room-type">
-        <option>Habitación Estándar ($80.000/noche)</option>
-        <option>Habitación Doble ($120.000/noche)</option>
-        <option>Habitación Ejecutiva Premium ($160.000/noche)</option>
-      </select>
+  </section>
+
+  <!-- FORMULARIO DE RESERVAS & CONTACTO -->
+  <section id="booking" class="section-padding bg-dark-2">
+    <div class="container px-md-5">
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-6" data-aos="fade-right">
+          <span class="sec-tag">📍 Ubicación y Reserva Directa</span>
+          <h2 class="text-white fw-bold mt-2">Ahorra Comisiones e Intermediarios</h2>
+          <p class="sec-sub mb-4">Escríbenos y cotiza tu estadía. Te responderemos al instante confirmando tu reserva con el mejor precio disponible.</p>
+          
+          <div class="info-list">
+            <div class="info-item d-flex align-items-center gap-3 mb-3">
+              <div class="ii-icon"><i class="bi bi-geo-alt"></i></div>
+              <span class="text-white-50">Carrera 14 # 16 A 07, Montería, Córdoba, Colombia</span>
+            </div>
+            <div class="info-item d-flex align-items-center gap-3 mb-3">
+              <div class="ii-icon"><i class="bi bi-telephone"></i></div>
+              <span class="text-white-50">Fijo en Recepción (Preguntar al contactar)</span>
+            </div>
+            <div class="info-item d-flex align-items-center gap-3 mb-3">
+              <div class="ii-icon"><i class="bi bi-envelope"></i></div>
+              <span class="text-white-50">contacto@hoteltariq.com</span>
+            </div>
+            <div class="info-item d-flex align-items-center gap-3">
+              <div class="ii-icon"><i class="bi bi-shield-check"></i></div>
+              <span class="text-white-50">Ambiente 100% familiar y libre de humo</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-6" data-aos="fade-left">
+          <div class="form-box-custom">
+            <h3 class="text-white mb-4">Consulta tu Reserva</h3>
+            <div class="mb-3 form-group-custom">
+              <label class="form-label">Nombre Completo</label>
+              <input type="text" class="form-control" id="guest-name" placeholder="Ej: Juan Doria"/>
+            </div>
+            <div class="mb-3 form-group-custom">
+              <label class="form-label">Habitación</label>
+              <select class="form-select" id="room-type">
+                <option>Habitación Estándar ($80.000/noche)</option>
+                <option>Habitación Doble ($120.000/noche)</option>
+                <option>Habitación Ejecutiva Premium ($160.000/noche)</option>
+              </select>
+            </div>
+            <div class="row mb-3">
+              <div class="col-6 form-group-custom">
+                <label class="form-label">Check-in</label>
+                <input type="date" class="form-control" id="check-in"/>
+              </div>
+              <div class="col-6 form-group-custom">
+                <label class="form-label">Check-out</label>
+                <input type="date" class="form-control" id="check-out"/>
+              </div>
+            </div>
+            <div class="mb-4 form-group-custom">
+              <label class="form-label">Huéspedes</label>
+              <input type="number" class="form-control" id="guests" min="1" max="4" value="1"/>
+            </div>
+
+            <!-- Calculadora de Ahorro Directo -->
+            <div id="calculator-box" class="mb-4" style="padding: 1.2rem; background: rgba(44,94,59,0.08); border: 1px dashed var(--green-light); border-radius: 6px; display: none;">
+              <h4 style="color:var(--green-light); margin-bottom: 0.5rem; font-size: 1.05rem;" class="fw-bold">Resumen de Ahorro Directo</h4>
+              <p class="small text-muted mb-1">Estadía: <span id="calc-nights" class="text-white fw-semibold">0</span> noches</p>
+              <p class="small text-muted mb-1">Valor Total: <span id="calc-total" class="text-white fw-semibold">$0 COP</span></p>
+              <p class="small text-success fw-bold mt-2 pt-2 border-top border-secondary">🎉 Ahorro Booking (15%): <span id="calc-savings">$0 COP</span></p>
+            </div>
+
+            <button class="btn btn-booking w-100" onclick="enviarConsulta()">📲 Consultar Disponibilidad por WhatsApp</button>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="fg"><label>Check-in</label><input type="date" id="check-in"/></div>
-    <div class="fg"><label>Check-out</label><input type="date" id="check-out"/></div>
-    <div class="fg"><label>Huéspedes</label><input type="number" id="guests" min="1" max="4" value="1"/></div>
+  </section>
 
-    <!-- Simulador de Ahorro para el Gerente y el Cliente -->
-    <div id="calculator-box" style="margin: 1.2rem 0; padding: 1.2rem; background: rgba(44,94,59,0.08); border: 1px dashed var(--green-light); border-radius: 6px; display: none;">
-      <h4 style="font-family:'Playfair Display',serif; color:var(--green-light); margin-bottom: 0.5rem; font-size: 1.05rem;">Resumen de Ahorro Directo</h4>
-      <p style="font-size:0.85rem; color:var(--muted); margin-bottom: 0.3rem;">Estadía: <span id="calc-nights" style="color:var(--text); font-weight:600;">0</span> noches</p>
-      <p style="font-size:0.85rem; color:var(--muted); margin-bottom: 0.3rem;">Valor Total: <span id="calc-total" style="color:var(--text); font-weight:600;">$0 COP</span></p>
-      <p style="font-size:0.9rem; color:#25D366; font-weight: 700; margin-top: 0.5rem; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 0.5rem;">🎉 Ahorro Booking (15%): <span id="calc-savings">$0 COP</span></p>
+  <!-- FOOTER -->
+  <footer class="footer-custom">
+    <div class="container px-md-5">
+      <div class="row g-4 align-items-center justify-content-between">
+        <div class="col-md-auto">
+          <div class="footer-logo">HOTEL Tariq</div>
+          <div class="mt-1 small">© 2026 Hotel Tariq · Montería, Córdoba · Todos los derechos reservados</div>
+        </div>
+        <div class="col-md-auto">
+          <p class="mb-0 small">Diseño web por <strong style="color:var(--green-light)">Nexo Digital</strong> · ¿Quieres una web sin comisiones? 📲</p>
+        </div>
+      </div>
     </div>
+  </footer>
 
-    <button class="btn-form" onclick="enviarConsulta()">📲 Consultar Disponibilidad por WhatsApp</button>
-  </div>
-</section>
+  <!-- Botón Flotante a WhatsApp -->
+  <a href="https://wa.me/573114191754" class="wa-float-btn" title="Escríbenos por WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
 
-<footer>
-  <div class="footer-logo">HOTEL Tariq</div>
-  <div class="footer-copy">© 2026 Hotel Tariq · Montería, Córdoba · Todos los derechos reservados</div>
-  <div class="footer-links">
-    <p>Diseño web por <strong style="color:var(--green-light)">Nexo Digital</strong> · ¿Quieres una web sin comisiones? 📲</p>
-  </div>
-</footer>
-
-<!-- Botón Flotante a WhatsApp (Placeholder) -->
-<a href="https://wa.me/573000000000" class="wa-float" title="Escríbenos por WhatsApp">💬</a>
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS JS (Animaciones) -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 </body>
 </html>
